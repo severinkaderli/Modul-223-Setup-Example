@@ -19,9 +19,9 @@ namespace Modul_223_Example
             // Check if database exist
             if(!File.Exists(databaseName))
             {
-                System.Console.WriteLine("Datei existiert nicht: " + databaseName);
-                System.Console.WriteLine("Press any key to exit");
-                System.Console.ReadLine();
+                Console.WriteLine("Datei existiert nicht: " + databaseName);
+                Console.WriteLine("Press any key to exit");
+                Console.ReadLine();
                 Environment.Exit(0);
             }
 
@@ -30,11 +30,11 @@ namespace Modul_223_Example
             connection.Open();
             SQLiteCommand command = new SQLiteCommand("SELECT * FROM benutzer;", connection);
             SQLiteDataReader reader = command.ExecuteReader();
-            System.Console.WriteLine("Benutzer:");
+            Console.WriteLine("Benutzer:");
             while (reader.Read())
                 Console.WriteLine(reader["id"] + ": " + reader["name"]);
 
-            System.Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
