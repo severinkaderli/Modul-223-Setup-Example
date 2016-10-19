@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Data.SQLite;
 using System.IO;
 
@@ -12,16 +9,16 @@ namespace Modul_223_Example
     {
 
         private static SQLiteConnection connection;
-        private static String databaseName = "database.db";
+        private static string databaseName = "database.db";
 
         static void Main(string[] args)
         {
             // Check if database exist
             if(!File.Exists(databaseName))
             {
-                Console.WriteLine("Datei existiert nicht: " + databaseName);
+                Console.WriteLine("Datei existiert nicht: {0}", databaseName);
                 Console.WriteLine("Press any key to exit");
-                Console.ReadLine();
+                Console.ReadKey();
                 Environment.Exit(0);
             }
 
@@ -32,9 +29,12 @@ namespace Modul_223_Example
             SQLiteDataReader reader = command.ExecuteReader();
             Console.WriteLine("Benutzer:");
             while (reader.Read())
-                Console.WriteLine(reader["id"] + ": " + reader["name"]);
+            {
+                Console.WriteLine("{0}: {1}", reader["id"], reader["name"]);
+            }
 
-            Console.ReadLine();
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
         }
     }
 }

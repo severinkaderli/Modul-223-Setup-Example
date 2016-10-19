@@ -511,7 +511,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Example-Project"
         "ProductCode" = "8:{6FE7699E-4EAB-4840-9D9B-B1A5DD885884}"
-        "PackageCode" = "8:{E31EA12D-80AD-478D-A065-E31EACE01202}"
+        "PackageCode" = "8:{D5356AAB-D0EC-4DB9-823B-B4E392027D23}"
         "UpgradeCode" = "8:{300A4A55-D9CA-4E64-AEF7-EC051C2A676E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
